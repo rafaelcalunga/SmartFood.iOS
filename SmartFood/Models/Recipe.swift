@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Recipe: Identifiable {
+struct Recipe: Identifiable, Codable {
     let id: UUID
     let name: String
     let preparationTime: Int
@@ -16,6 +16,6 @@ struct Recipe: Identifiable {
     let description: String
     let category: Category
     let photo: String
-    let createdAt: Date
-    let updatedAt: Date
+    //let createdAt: Date
+    //let updatedAt: Date
 }
