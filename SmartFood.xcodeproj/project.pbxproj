@@ -44,6 +44,7 @@
 		6D87ADE027DBDAD900F677F6 /* SmartFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D87ADE427DBDAD900F677F6 /* SmartFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFoodUITests.swift; sourceTree = "<group>"; };
 		6D87ADE627DBDAD900F677F6 /* SmartFoodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFoodUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6D87ADF327DBDE4300F677F6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 				6D87ADC827DBDAD900F677F6 /* SmartFood */,
 				6D87ADD927DBDAD900F677F6 /* SmartFoodTests */,
 				6D87ADE327DBDAD900F677F6 /* SmartFoodUITests */,
+				6D87ADF327DBDE4300F677F6 /* README.md */,
 				6D87ADC727DBDAD900F677F6 /* Products */,
 			);
 			sourceTree = "<group>";
