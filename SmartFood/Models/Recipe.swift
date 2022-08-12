@@ -8,14 +8,25 @@
 import Foundation
 
 struct Recipe: Identifiable, Codable {
-    let id: UUID
-    let name: String
-    let preparationTime: Int
-    let servings: Int
-    let ingredients: String
-    let description: String
-    let category: Category
-    let photo: String
+    var id: UUID
+    var name: String
+    var preparationTime: Int
+    var servings: Int
+    var ingredients: String
+    var description: String
+    var category: Category
+    var photo: String
     //let createdAt: Date
     //let updatedAt: Date
+    
+    static var newRecipe = Recipe(
+        id: UUID(),
+        name: "",
+        preparationTime: 0,
+        servings: 0,
+        ingredients: "",
+        description: "",
+        category: Category(id: UUID(), name: ""),
+        photo: "https://picsum.photos/400/300"
+    )
 }

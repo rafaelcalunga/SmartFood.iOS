@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipesView: View {
     @StateObject var viewmodel = RecipesViewModel()
+    @State private var showAddForm = false
     
     var body: some View {
         NavigationView {
@@ -24,11 +25,27 @@ struct RecipesView: View {
             .refreshable {
                 await fetchData()
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: openForm) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showAddForm) {
+                RecipeFormView()
+                    .environmentObject(viewmodel)
+            }
         }
     }
 }
 
 extension RecipesView {
+    func openForm() {
+        viewmodel.recipe = Recipe.newRecipe
+        showAddForm.toggle()
+    }
+    
     func fetchData() async {
         do {
             try await viewmodel.fetchRecipes()

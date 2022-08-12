@@ -14,6 +14,7 @@
 		6D87ADDB27DBDAD900F677F6 /* SmartFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D87ADDA27DBDAD900F677F6 /* SmartFoodTests.swift */; };
 		6D87ADE527DBDAD900F677F6 /* SmartFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D87ADE427DBDAD900F677F6 /* SmartFoodUITests.swift */; };
 		6D87ADE727DBDAD900F677F6 /* SmartFoodUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D87ADE627DBDAD900F677F6 /* SmartFoodUITestsLaunchTests.swift */; };
+		6D9AB87F2896F0F2000A4D94 /* RecipeFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9AB87E2896F0F2000A4D94 /* RecipeFormView.swift */; };
 		6DED96D227DBE06600E426E0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED96D127DBE06600E426E0 /* Category.swift */; };
 		6DED96D427DBE07600E426E0 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED96D327DBE07600E426E0 /* Recipe.swift */; };
 		6DED96D627DBE1BA00E426E0 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED96D527DBE1BA00E426E0 /* RecipeView.swift */; };
@@ -51,6 +52,7 @@
 		6D87ADE427DBDAD900F677F6 /* SmartFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFoodUITests.swift; sourceTree = "<group>"; };
 		6D87ADE627DBDAD900F677F6 /* SmartFoodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFoodUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6D87ADF327DBDE4300F677F6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6D9AB87E2896F0F2000A4D94 /* RecipeFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFormView.swift; sourceTree = "<group>"; };
 		6DED96D127DBE06600E426E0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6DED96D327DBE07600E426E0 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		6DED96D527DBE1BA00E426E0 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				6D87ADCB27DBDAD900F677F6 /* RecipesView.swift */,
 				6DED96D527DBE1BA00E426E0 /* RecipeView.swift */,
+				6D9AB87E2896F0F2000A4D94 /* RecipeFormView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			files = (
 				6D87ADCC27DBDAD900F677F6 /* RecipesView.swift in Sources */,
 				6D87ADCA27DBDAD900F677F6 /* SmartFoodApp.swift in Sources */,
+				6D9AB87F2896F0F2000A4D94 /* RecipeFormView.swift in Sources */,
 				6DED96D827DBE2E400E426E0 /* MockedData.swift in Sources */,
 				6DED96D227DBE06600E426E0 /* Category.swift in Sources */,
 				6DED96D427DBE07600E426E0 /* Recipe.swift in Sources */,
@@ -469,6 +473,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartFood/Preview Content\"";
+				DEVELOPMENT_TEAM = 8AYJR2225N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -497,6 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartFood/Preview Content\"";
+				DEVELOPMENT_TEAM = 8AYJR2225N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
