@@ -17,8 +17,9 @@ struct RecipesView: View {
                 ForEach(viewmodel.recipes) { recipe in
                     RecipeView(recipe: recipe)
                 }
-                .navigationTitle("Recipes")
+                .onDelete(perform: deleteRecipe)
             }
+            .navigationTitle("Recipes")
             .task {
                 await fetchData()
             }
@@ -26,6 +27,9 @@ struct RecipesView: View {
                 await fetchData()
             }
             .toolbar {
+                /*ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }*/
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: openForm) {
                         Image(systemName: "plus")
@@ -51,6 +55,16 @@ extension RecipesView {
             try await viewmodel.fetchRecipes()
         } catch {
             print("ERROR: \(error)")
+        }
+    }
+                    
+    func deleteRecipe(at indexSet: IndexSet) {
+        Task {
+            do {
+                try await viewmodel.deleteRecipe(at: indexSet)
+            } catch {
+                print("ERROR: \(error)")
+            }
         }
     }
 }

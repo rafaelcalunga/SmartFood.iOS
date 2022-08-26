@@ -62,4 +62,23 @@ class RecipesViewModel: ObservableObject {
         let createdRecipe = try decoder.decode(Recipe.self, from: data)
         recipes.append(createdRecipe)
     }
+    
+    @MainActor func deleteRecipe(at indexSet: IndexSet) async throws {
+        let ids = indexSet.map { self.recipes[$0].id }
+        let id = ids[0].uuidString.lowercased()
+        
+        print("LOG: deleteRecipe...", id)
+        let url = URL(string: "\(apiURL)/recipes/\(id)")!
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        guard (response as? HTTPURLResponse)?.statusCode == 204 else {
+            throw NetworkError.serverError
+        }
+        
+        recipes.remove(atOffsets: indexSet)
+    }
 }
