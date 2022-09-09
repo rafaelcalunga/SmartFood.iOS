@@ -12,7 +12,7 @@ struct RecipeView: View {
     var recipe: Recipe
     
     var body: some View {
-        HStack {
+        NavigationLink(destination: Text("oi")) {
             AsyncImage(url: URL(string: recipe.photo)) { image in
                 image
                     .resizable()
@@ -25,6 +25,7 @@ struct RecipeView: View {
             VStack(alignment: .leading) {
                 Text(recipe.name)
                     .font(.headline)
+                    .foregroundColor(.primary)
                 
                 VStack(alignment: .leading) {
                     Label("\(recipe.preparationTime) min", systemImage: "clock")
@@ -41,8 +42,6 @@ struct RecipeView: View {
                     .foregroundColor(.white)
                     .cornerRadius(12)
             }
-            
-            Spacer()
         }
     }
 }

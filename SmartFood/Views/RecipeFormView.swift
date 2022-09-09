@@ -33,6 +33,7 @@ struct RecipeFormView: View {
                             .tag(category)
                     }
                 }
+                .pickerStyle(.automatic)
                 
                 Section(header: Text("Description")) {
                     TextField("Description", text: $viewmodel.recipe.description)

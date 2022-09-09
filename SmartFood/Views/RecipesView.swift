@@ -10,6 +10,8 @@ import SwiftUI
 struct RecipesView: View {
     @StateObject var viewmodel = RecipesViewModel()
     @State private var showAddForm = false
+    @State private var showConfirmation = false
+    @State private var indexSetToDelete: IndexSet?
     
     var body: some View {
         NavigationView {
@@ -17,7 +19,18 @@ struct RecipesView: View {
                 ForEach(viewmodel.recipes) { recipe in
                     RecipeView(recipe: recipe)
                 }
-                .onDelete(perform: deleteRecipe)
+                //.onDelete(perform: deleteRecipe)
+                .onDelete { indexSet in
+                    indexSetToDelete = indexSet
+                    showConfirmation.toggle()
+                }
+                .confirmationDialog("Are you sure?", isPresented: $showConfirmation, titleVisibility: .visible) {
+                    Button("Delete", role: .destructive) {
+                        if let indexSetToDelete = indexSetToDelete {
+                            deleteRecipe(at: indexSetToDelete)
+                        }
+                    }
+                }
             }
             .navigationTitle("Recipes")
             .task {
@@ -36,6 +49,7 @@ struct RecipesView: View {
                     }
                 }
             }
+            
             .sheet(isPresented: $showAddForm) {
                 RecipeFormView()
                     .environmentObject(viewmodel)
